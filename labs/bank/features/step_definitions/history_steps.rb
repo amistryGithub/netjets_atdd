@@ -1,20 +1,28 @@
 
-
-When(/^I go to the Accounts details link for one of my account$/) do
-  open_bank_website
+When(/^I go to the Accounts History for one of my account$/) do
   login_to_website
 
+  visit_accountHistory_page
 end
 
-When(/^I see go to Account Details$/) do
-  pending
+Then(/^I see Transaction History for that account$/) do
+  gather_history_data
+
+
+  #loop over the history Hash and verify with expect
+  #verify_account_history_data
+
+  def verify_account_history_data
+    warn('Stubbed out ')
+  end
 end
 
-Then(/^I see a list of accounts$/) do |table|
-  # table is a table.hashes.keys # => [:accounts]
-  table.Hash.new
+When(/^I select the transaction type on the Account History$/) do
+  select_deposit_transaction_type
 end
 
-Given(/^That a bank customer has one of each account type$/) do
-  pending
+Then(/^I see the Account History for that transaction type$/) do
+  verify_
 end
+
+

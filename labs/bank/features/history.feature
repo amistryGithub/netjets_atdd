@@ -5,8 +5,8 @@ Feature: Viewing Account History
 
 
   Scenario: View the accounts history
-    When I go to the Accounts History for one of account
-    Then I see Account History for that account
+    When I go to the Accounts History for one of my account
+    Then I see Transaction History for that account
 
   Scenario: View the history by transaction types
     When I select the transaction type on the Account History
