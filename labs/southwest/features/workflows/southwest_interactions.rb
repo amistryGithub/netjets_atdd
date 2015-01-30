@@ -18,13 +18,7 @@ module SouthwestInteractions
   end
 
   def search_for_flight_betn_two_cities
-    on_page FlightSchedule do |page|
-      page.originAirport = 'CMH'
-      page.destAirport = 'BWI'
-      page.outBoundDate = '01/30/2015'
-      #page.daily = true
-      page.searchSchedule
-    end
+    on_page FlightSchedule.get_flight_schedule('CMH','BWI','01/30/2015')
   end
 
 

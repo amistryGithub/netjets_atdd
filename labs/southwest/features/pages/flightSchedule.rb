@@ -15,4 +15,13 @@ class FlightSchedule
   #radio(:daily, :id => 'daily')
   button(:searchSchedule, :id => 'flightSchedulesForm_submitButton')
 
+
+  def get_flight_schedule(origin,destination,deptatureDate)
+    originAirport = origin
+    destAirport = destination
+    outBoundDate = deptatureDate
+    #daily = true
+    searchSchedule
+  end
+
 end

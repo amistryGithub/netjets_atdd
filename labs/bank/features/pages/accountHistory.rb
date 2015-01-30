@@ -3,7 +3,7 @@
 class AccountHistory
 
   #How do we get to AccountHistory page?
-  page_url
+  #page_url
 
   #table(:transactions, :id => 'transTable')
 

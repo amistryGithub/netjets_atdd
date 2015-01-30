@@ -21,9 +21,15 @@ end
 
 Then(/^I am shown summaries of several recent news items on the dashboard$/) do
   assert @browser.span(:id => "In_the_news").exists?
-  assert @browser.lis(:xpath => "//div[@id='mp-itn']/ul/li").length > 0
+  assert @browser.list(:xpath => "//div[@id='mp-itn']/ul/li").length > 0
 end
 
 And(/^I am shown names of (\d+) recently deceased individuals on the dashboard$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+  #pending # express the regexp above with the code you wish you had
+  assert @browser.list(:xpath => "//div[@id=''")
+
+end
+
+And(/^I can access Wikinews from the dashboard$/) do
+  #pending
 end
